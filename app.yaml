@@ -1,0 +1,13 @@
+application: pokedollars-mp
+version: 2
+runtime: python27
+api_version: 2
+threadsafe: true
+
+handlers:
+- url: /fa_money/[a-z0-9.-]+/(history/[1-9][0-9]*)?
+  script: base.app
+
+- url: /fa_money/[a-z0-9.-]+/admin
+  script: base.app
+  login: admin
